@@ -3,6 +3,13 @@ import path from 'path';
 import Users from './collections/Users';
 import { payloadCloud } from '@payloadcms/plugin-cloud';
 import BeforeDashboard from './components/BeforeDashboard';
+import Contact from './collections/Contact';
+import DirectionWithDescription from './collections/DirectionWithDescription';
+import Hero from './collections/Hero';
+import LaboratoryWithDescription from './collections/LaboratoryWithDescription';
+import Logo from './collections/Logo';
+import Media from './collections/Media';
+import MainPage from './global/MainPage';
 
 export default buildConfig({
   admin: {
@@ -15,7 +22,21 @@ export default buildConfig({
   },
   collections: [
     Users,
+    Contact,
+    DirectionWithDescription,
+    Hero,
+    LaboratoryWithDescription,
+    Logo,
+    Media
   ],
+  globals: [
+    MainPage
+  ],
+  localization: {
+    locales: ['en', 'kz', 'rus'],
+    defaultLocale: 'rus',
+    fallback: true,
+  },
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
