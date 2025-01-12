@@ -18,6 +18,9 @@ app.get('/', (_, res) => {
   res.redirect('/admin');
 });
 
+const HOST = process.env.HOST || '127.0.0.1'; // Default to localhost
+const PORT = parseInt(process.env.PORT || '3001', 10);
+
 const start = async () => {
   // Initialize Payload
   await payload.init({
@@ -31,7 +34,9 @@ const start = async () => {
 
   // Add your own express routes here
 
-  app.listen(3001);
+  app.listen(PORT, HOST, () => {
+    console.log(`Server is running on http://${HOST}:${PORT}`);
+  });
 }
 
 start();
