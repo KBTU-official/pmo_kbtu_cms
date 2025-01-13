@@ -18,7 +18,7 @@ app.get('/', (_, res) => {
   res.redirect('/admin');
 });
 
-const HOST = process.env.HOST || '127.0.0.1'; // Default to localhost
+const HOST = process.env.HOST || '0.0.0.0'; // Default to localhost
 const PORT = parseInt(process.env.PORT || '3001', 10);
 
 const start = async () => {
