@@ -13,7 +13,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-Redirect root to Admin panel
+// Redirect root to Admin panel
 app.get('/', (_, res) => {
   res.redirect('/admin');
 });
