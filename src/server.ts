@@ -14,9 +14,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Redirect root to Admin panel
-app.get('/', (_, res) => {
-  res.redirect('/admin');
-});
+// app.get('/', (_, res) => {
+//   res.redirect('/admin');
+// });
 
 const HOST = process.env.HOST || '0.0.0.0'; // Default to localhost
 const PORT = parseInt(process.env.PORT || '3001', 10);
