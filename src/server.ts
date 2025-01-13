@@ -6,17 +6,17 @@ require('dotenv').config();
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:5173', 'http://pmo.kbtu.kz'], // Replace with your allowed origins
+  origin: ['http://localhost:5173', 'http://pmo.kbtu.kz', 'https://pmo.kbtu.kz'], // Replace with your allowed origins
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
   credentials: true, // Allow credentials
 };
 app.use(cors(corsOptions));
 
-// Redirect root to Admin panel
-// app.get('/', (_, res) => {
-//   res.redirect('/admin');
-// });
+Redirect root to Admin panel
+app.get('/', (_, res) => {
+  res.redirect('/admin');
+});
 
 const HOST = process.env.HOST || '0.0.0.0'; // Default to localhost
 const PORT = parseInt(process.env.PORT || '3001', 10);
