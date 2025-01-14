@@ -12,6 +12,11 @@ import Media from './collections/Media';
 import MainPage from './global/MainPage';
 
 export default buildConfig({
+  routes: {
+    api: '/api2', // Set API route prefix to /api2
+    admin: '/cms/admin',
+  },
+  serverURL: "https://pmo.kbtu.kz",
   admin: {
     user: Users.slug,
     components: {
