@@ -13,7 +13,7 @@ import MainPage from './global/MainPage';
 
 export default buildConfig({
   routes: {
-    api: '/api2', // Set API route prefix to /api2
+    api: '/cms/api', // Set API route prefix to /api2
     admin: '/cms/admin',
   },
   serverURL: "https://pmo.kbtu.kz",
